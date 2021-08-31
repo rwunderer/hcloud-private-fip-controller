@@ -46,6 +46,16 @@ func NewController(config *config.Config) (*Controller, error) {
 }
 
 func (controller *Controller) Run(ctx context.Context) error {
+
+	err := controller.validateIp(ctx, controller.Config.NetworkName, controller.Config.HostIp)
+	if err != nil {
+		return fmt.Errorf("HostIP verification failed: %v", err)
+	}
+
+	err = controller.validateIp(ctx, controller.Config.NetworkName, controller.Config.IpAddress)
+	if err != nil {
+		return fmt.Errorf("FloatingIP verification failed: %v", err)
+	}
 	log.Print("Initialization complete. Starting reconciliation")
 
 	if err := controller.watchIp(ctx); err != nil {
@@ -97,6 +107,21 @@ func (controller *Controller) watchIp(ctx context.Context) error {
 
 	} else {
 		log.Printf("Address %v is not local to %v.", ip, controller.Config.HostIp)
+	}
+
+	return nil
+}
+
+func (controller *Controller) validateIp(ctx context.Context, netName string, ipAddress string) error {
+	ip := net.ParseIP(ipAddress)
+
+	netw, err := controller.getNetwork(ctx, netName)
+	if err != nil {
+		return fmt.Errorf("Error getting network: %v", err)
+	}
+
+	if ! netw.IPRange.Contains(ip) {
+		return fmt.Errorf("Network %v does not contain ip %v", netName, ipAddress)
 	}
 
 	return nil
