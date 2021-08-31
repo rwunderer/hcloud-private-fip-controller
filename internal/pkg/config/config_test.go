@@ -8,7 +8,9 @@ import (
 func testConfig() *Config {
 	return &Config{
 		ApiToken:  "aToken",
+		HostIp: "2.3.4.5",
 		IpAddress: "1.2.3.4",
+		NetworkName: "test",
 	}
 }
 
