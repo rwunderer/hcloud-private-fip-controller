@@ -1,7 +1,7 @@
 #--------
 # builder
 #--------
-FROM golang:alpine as builder
+FROM golang:alpine@sha256:feceecc0e1d73d085040a8844de11a2858ba4a0c58c16a672f1736daecc2a4ff as builder
 
 WORKDIR /app
 
@@ -18,7 +18,7 @@ RUN CGO_ENABLED=0 GOOS=linux go build -a -installsuffix cgo -ldflags '-extldflag
 #--------
 # container
 #--------
-FROM gcr.io/distroless/static
+FROM gcr.io/distroless/static@sha256:6706c73aae2afaa8201d63cc3dda48753c09bcd6c300762251065c0f7e602b25
 
 WORKDIR /app
 
