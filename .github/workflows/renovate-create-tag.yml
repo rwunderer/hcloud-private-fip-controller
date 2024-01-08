@@ -33,7 +33,7 @@ jobs:
         run: echo "current_version=$(grep version= build/package/Dockerfile | cut -d '=' -f2)" >> $GITHUB_ENV
 
       - name: Bump Version
-        uses: FragileTech/bump-version@v1.0.4
+        uses: FragileTech/bump-version@f1678e44097926900b36c3e144de0f1286bc7bcc # v1.0.7
         with:
           current_version: "${{ env.current_version }}"
           files: build/package/Dockerfile
