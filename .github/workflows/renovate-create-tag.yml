@@ -1,0 +1,43 @@
+name: Auto-Tag
+
+# This workflow uses actions that are not certified by GitHub.
+# They are provided by a third-party and are governed by
+# separate terms of service, privacy policy, and support
+# documentation.
+
+on:
+  pull_request:
+    types: [ "closed" ]
+
+env:
+  # Use docker.io for Docker Hub if empty
+  REGISTRY: ghcr.io
+  # github.repository as <account>/<repo>
+  IMAGE_NAME: ${{ github.repository }}
+
+jobs:
+  update_tag:
+    if: >-
+      github.event.pull_request.merged == true &&
+      contains(github.event.pull_request.labels.*.name, 'renovate_publish')
+
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@b4ffde65f46336ab88eb53be808477a3936bae11 # 4.1.1
+
+      - name: Current version
+        run: echo "current_version=$(grep version= build/package/Dockerfile | cut -d '=' -f2)" >> $GITHUB_ENV
+
+    - name: FragileTech/bump-version
+      uses: FragileTech/bump-version@v1.0.4
+      with:
+        current_version: "${{ env.current_version }}"
+        files: build/package/Dockerfile
+        commit_name: Tagging Bot
+        commit_email: robert.wunderer@caprisys.at
+        login: rwunderer
+        token: "${{ secrets.TAGGING_TOKEN }}"

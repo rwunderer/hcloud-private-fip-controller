@@ -1,6 +1,19 @@
 {
   "$schema": "https://docs.renovatebot.com/renovate-schema.json",
   "extends": [
-    "github>rwunderer/renovate"
+    "github>rwunderer/renovate",
+    "github>rwunderer/renovate:container-tools",
+    "regexManagers:dockerfileVersions"
+  ],
+
+  "packageRules": [
+    {
+      "matchManagers": ["gomod"],
+      "groupName": "go-modules",
+      "automerge": true,
+      "addLabels": [
+        "renovate_publish"
+      ]
+    }
   ]
 }
