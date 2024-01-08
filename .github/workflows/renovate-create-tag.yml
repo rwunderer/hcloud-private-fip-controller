@@ -32,12 +32,12 @@ jobs:
       - name: Current version
         run: echo "current_version=$(grep version= build/package/Dockerfile | cut -d '=' -f2)" >> $GITHUB_ENV
 
-    - name: FragileTech/bump-version
-      uses: FragileTech/bump-version@v1.0.4
-      with:
-        current_version: "${{ env.current_version }}"
-        files: build/package/Dockerfile
-        commit_name: Tagging Bot
-        commit_email: robert.wunderer@caprisys.at
-        login: rwunderer
-        token: "${{ secrets.TAGGING_TOKEN }}"
+      - name: Bump Version
+        uses: FragileTech/bump-version@v1.0.4
+        with:
+          current_version: "${{ env.current_version }}"
+          files: build/package/Dockerfile
+          commit_name: Tagging Bot
+          commit_email: robert.wunderer@caprisys.at
+          login: rwunderer
+          token: "${{ secrets.TAGGING_TOKEN }}"
