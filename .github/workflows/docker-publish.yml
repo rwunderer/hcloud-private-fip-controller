@@ -78,14 +78,14 @@ jobs:
         uses: docker/build-push-action@4a13e500e55cf31b7a5d59a38ab2040ab0f42f56 # v5.1.0
         with:
           context: .
-          file: build/package/Dockerfile
           push: ${{ github.event_name != 'pull_request' }}
           platforms: linux/amd64,linux/arm64
+          file: ./build/package/Dockerfile
           tags: ${{ steps.meta.outputs.tags }}
           labels: ${{ steps.meta.outputs.labels }}
           cache-from: type=gha
           cache-to: type=gha,mode=max
-          outputs: type=image,name=target,annotation-index.org.opencontainers.image.description=Minimal Docker image with Hetzner cli utility,org.opencontainers.image.licenses=MIT
+          outputs: type=image,name=target,annotation-index.org.opencontainers.image.description=Small k8s controller to simulate a floating ip on hetzner cloud's private network.,org.opencontainers.image.licenses=Apache2.0
 
       # Sign the resulting Docker image digest except on PRs.
       # This will only write to the public Rekor transparency log when the Docker
