@@ -37,6 +37,6 @@ require (
 
 require (
 	github.com/kr/text v0.2.0 // indirect
-	github.com/rogpeppe/go-internal v1.11.0 // indirect
+	github.com/rogpeppe/go-internal v1.12.0 // indirect
 	k8s.io/klog/v2 v2.110.1 // indirect
 )
