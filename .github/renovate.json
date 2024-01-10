@@ -15,6 +15,9 @@
     {
       "matchManagers": ["gomod"],
       "groupName": "go-modules",
+      "postUpdateOptions": [
+        "gomodUpdateImportPaths"
+      ],
       "automerge": true,
       "addLabels": [
         "renovate_publish"
