@@ -5,7 +5,7 @@ import (
 	"fmt"
 	"net"
 
-	"github.com/hetznercloud/hcloud-go/hcloud"
+	"github.com/hetznercloud/hcloud-go/v2/hcloud"
 	"k8s.io/client-go/util/retry"
 )
 
