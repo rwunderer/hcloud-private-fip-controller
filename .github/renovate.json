@@ -19,6 +19,7 @@
         "gomodUpdateImportPaths",
         "gomodTidy"
       ],
+      "automergeType": "pr",
       "automerge": true,
       "addLabels": [
         "renovate_publish"
