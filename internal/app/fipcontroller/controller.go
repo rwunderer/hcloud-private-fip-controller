@@ -9,7 +9,7 @@ import (
 
 	"k8s.io/apimachinery/pkg/util/wait"
 
-	"github.com/hetznercloud/hcloud-go/hcloud"
+	"github.com/hetznercloud/hcloud-go/v2/hcloud"
 
 	"github.com/rwunderer/hcloud-private-fip-controller/internal/pkg/config"
 )
@@ -120,7 +120,7 @@ func (controller *Controller) validateIp(ctx context.Context, netName string, ip
 		return fmt.Errorf("Error getting network: %v", err)
 	}
 
-	if ! netw.IPRange.Contains(ip) {
+	if !netw.IPRange.Contains(ip) {
 		return fmt.Errorf("Network %v does not contain ip %v", netName, ipAddress)
 	}
 
