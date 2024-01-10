@@ -5,10 +5,8 @@ go 1.21
 toolchain go1.21.5
 
 require (
-	github.com/hetznercloud/hcloud-go/v2 v2.6.0
-	github.com/hetznercloud/hcloud-go/v2 v2.6.0
-	gopkg.in/yaml.v3 v3.0.1
-	gopkg.in/yaml.v3 v3.0.1
+	github.com/hetznercloud/hcloud-go v1.53.0
+	gopkg.in/yaml.v2 v2.4.0
 	k8s.io/apimachinery v0.29.0
 	k8s.io/client-go v0.29.0
 )
@@ -38,7 +36,7 @@ require (
 )
 
 require (
-	github.com/alexellis/hmac/v2 v2.0.0 // indirect
-	github.com/moby/spdystream v0.2.0 // indirect
+	github.com/kr/text v0.2.0 // indirect
+	github.com/rogpeppe/go-internal v1.11.0 // indirect
 	k8s.io/klog/v2 v2.110.1 // indirect
 )
