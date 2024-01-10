@@ -16,7 +16,8 @@
       "matchManagers": ["gomod"],
       "groupName": "go-modules",
       "postUpdateOptions": [
-        "gomodUpdateImportPaths"
+        "gomodUpdateImportPaths",
+        "gomodTidy"
       ],
       "automerge": true,
       "addLabels": [
