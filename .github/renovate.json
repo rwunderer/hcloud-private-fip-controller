@@ -9,11 +9,6 @@
   "packageRules": [
     {
       "matchManagers": ["gomod"],
-      "matchDepTypes": ["indirect"],
-      "enabled": true
-    },
-    {
-      "matchManagers": ["gomod"],
       "groupName": "go-modules",
       "postUpdateOptions": [
         "gomodUpdateImportPaths",
