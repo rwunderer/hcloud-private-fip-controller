@@ -33,11 +33,15 @@ jobs:
         run: echo "current_version=$(grep version= build/package/Dockerfile | cut -d '=' -f2)" >> $GITHUB_ENV
 
       - name: Bump Version
-        uses: FragileTech/bump-version@f1678e44097926900b36c3e144de0f1286bc7bcc # v1.0.7
+        uses: jaumann/github-bumpversion-action@v0.0.7
+        env:
+          GITHUB_TOKEN: ${{ secrets.TAGGING_TOKEN }}
+
+      - uses: butlerlogic/action-autotag@a825539276d173dbaa8d39fb45024d85d292f4f3 # 1.1.2
+        env:
+          GITHUB_TOKEN: "${{ secrets.TAGGING_TOKEN }}"
         with:
-          current_version: "${{ env.current_version }}"
-          files: build/package/Dockerfile
-          commit_name: Tagging Bot
-          commit_email: robert.wunderer@caprisys.at
-          login: rwunderer
-          token: "${{ secrets.TAGGING_TOKEN }}"
+          strategy: regex
+          root: "build/package/Dockerfile"
+          regex_pattern: "version=(\\d+\\.\\d+\\.\\d+)"
+          tag_prefix: "v"
