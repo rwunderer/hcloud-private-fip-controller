@@ -33,7 +33,7 @@ jobs:
         run: echo "current_version=$(grep version= build/package/Dockerfile | cut -d '=' -f2)" >> $GITHUB_ENV
 
       - name: Bump Version
-        uses: jaumann/github-bumpversion-action@v0.0.7
+        uses: jaumann/github-bumpversion-action@2aa01a9da6481d7b35cd5edbf5da74e1ef2ccbd5 # v0.0.7
         env:
           GITHUB_TOKEN: ${{ secrets.TAGGING_TOKEN }}
 
