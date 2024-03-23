@@ -5,7 +5,6 @@
     "github>rwunderer/renovate:container-tools",
     "regexManagers:dockerfileVersions"
   ],
-
   "customManagers": [
     {
       "customType": "regex",
@@ -18,17 +17,17 @@
       "versioningTemplate": "{{#if versioning}}{{{versioning}}}{{else}}semver{{/if}}"
     }
   ],
-
   "packageRules": [
     {
       "matchPackageNames": [
         "cosign"
       ],
-      "automerge": "true"
+      "automerge": true
     },
-
     {
-      "matchManagers": ["gomod"],
+      "matchManagers": [
+        "gomod"
+      ],
       "groupName": "go-modules",
       "postUpdateOptions": [
         "gomodUpdateImportPaths",
