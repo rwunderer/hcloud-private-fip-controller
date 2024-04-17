@@ -1,14 +1,14 @@
 module github.com/rwunderer/hcloud-private-fip-controller
 
-go 1.21
+go 1.22.0
 
 toolchain go1.22.2
 
 require (
 	github.com/hetznercloud/hcloud-go/v2 v2.7.0
 	gopkg.in/yaml.v3 v3.0.1
-	k8s.io/apimachinery v0.29.4
-	k8s.io/client-go v0.29.4
+	k8s.io/apimachinery v0.30.0
+	k8s.io/client-go v0.30.0
 )
 
 require (
@@ -37,5 +37,5 @@ require (
 require (
 	github.com/rogpeppe/go-internal v1.12.0 // indirect
 	gopkg.in/yaml.v2 v2.4.0 // indirect
-	k8s.io/klog/v2 v2.120.0 // indirect
+	k8s.io/klog/v2 v2.120.1 // indirect
 )
