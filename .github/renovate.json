@@ -4,12 +4,13 @@
     "github>rwunderer/renovate",
     "github>rwunderer/renovate:container-tools",
     "github>rwunderer/renovate:cosign-version",
-    "regexManagers:dockerfileVersions"
+    "customManagers:dockerfileVersions"
   ],
-
   "packageRules": [
     {
-      "matchManagers": ["gomod"],
+      "matchManagers": [
+        "gomod"
+      ],
       "groupName": "go-modules",
       "postUpdateOptions": [
         "gomodUpdateImportPaths",
