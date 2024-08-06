@@ -5,7 +5,7 @@ go 1.22.0
 toolchain go1.22.5
 
 require (
-	github.com/hetznercloud/hcloud-go/v2 v2.12.0
+	github.com/hetznercloud/hcloud-go/v2 v2.13.0
 	gopkg.in/yaml.v3 v3.0.1
 	k8s.io/apimachinery v0.30.3
 	k8s.io/client-go v0.30.3
