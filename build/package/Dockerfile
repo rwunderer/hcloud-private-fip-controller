@@ -1,7 +1,7 @@
 #--------
 # builder
 #--------
-FROM golang:1.23.0-alpine@sha256:d0b31558e6b3e4cc59f6011d79905835108c919143ebecc58f35965bf79948f4 as builder
+FROM golang:1.23.1-alpine@sha256:086ba4ead3a350230464f4cd8142f954e6b128ec8b59c1c924cba1e3a14106ae as builder
 
 ARG TARGETPLATFORM
 ARG TARGETOS="linux"
