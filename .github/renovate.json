@@ -23,7 +23,7 @@
       ]
     },
     {
-      "matchDepName": [
+      "matchDepNames": [
         "golang"
       ],
       "automerge": true,
