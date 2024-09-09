@@ -16,8 +16,18 @@
         "gomodUpdateImportPaths",
         "gomodTidy"
       ],
-      "automergeType": "pr",
       "automerge": true,
+      "automergeType": "pr",
+      "addLabels": [
+        "renovate_publish"
+      ]
+    },
+    {
+      "matchDepName": [
+        "golang"
+      ],
+      "automerge": true,
+      "automergeType": "pr",
       "addLabels": [
         "renovate_publish"
       ]
