@@ -18,4 +18,5 @@ jobs:
     with:
       regex-pattern: "version=(\\d+\\.\\d+\\.\\d+)"
       tag-prefix: "v"
+      docker-file: ./build/package/Dockerfile
     secrets: inherit
