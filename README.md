@@ -11,6 +11,7 @@ a local interface it configures a corresponding route via hcloud API.
 My personal use case for this feature is [Talos' virtual IP](https://www.talos.dev/docs/v1.8/guides/vip/)
 on the control-plane of my cluster.
 
+
 ## Usage
 
 * Define a private network with a large IP range (eg. `10.0.0.0/8`) and a smaller subnet
