@@ -8,7 +8,7 @@ some external means. The controller runs on each possible target node and waits
 for the "floating" ip to be assigned locally. As soon as it detects the ip on
 a local interface it configures a corresponding route via hcloud API.
 
-My personal use case for this feature is [Talos' virtual IP](https://www.talos.dev/docs/v0.12/guides/vip/)
+My personal use case for this feature is [Talos' virtual IP](https://www.talos.dev/docs/v1.8/guides/vip/)
 on the control-plane of my cluster.
 
 ## Usage
