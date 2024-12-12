@@ -1,14 +1,14 @@
 module github.com/rwunderer/hcloud-private-fip-controller
 
-go 1.22.0
+go 1.23.0
 
 toolchain go1.23.4
 
 require (
 	github.com/hetznercloud/hcloud-go/v2 v2.17.0
 	gopkg.in/yaml.v3 v3.0.1
-	k8s.io/apimachinery v0.31.4
-	k8s.io/client-go v0.31.4
+	k8s.io/apimachinery v0.32.0
+	k8s.io/client-go v0.32.0
 )
 
 require (
@@ -27,11 +27,11 @@ require (
 	golang.org/x/net v0.30.0 // indirect
 	golang.org/x/sys v0.26.0 // indirect
 	golang.org/x/text v0.19.0 // indirect
-	google.golang.org/protobuf v1.34.2 // indirect
+	google.golang.org/protobuf v1.35.1 // indirect
 	gopkg.in/inf.v0 v0.9.1 // indirect
-	k8s.io/utils v0.0.0-20240711033017-18e509b52bc8 // indirect
-	sigs.k8s.io/json v0.0.0-20221116044647-bc3834ca7abd // indirect
-	sigs.k8s.io/structured-merge-diff/v4 v4.4.1 // indirect
+	k8s.io/utils v0.0.0-20241104100929-3ea5e8cea738 // indirect
+	sigs.k8s.io/json v0.0.0-20241010143419-9aa6b5e7a4b3 // indirect
+	sigs.k8s.io/structured-merge-diff/v4 v4.4.2 // indirect
 )
 
 require (
@@ -39,6 +39,6 @@ require (
 	github.com/klauspost/compress v1.17.9 // indirect
 	github.com/munnerz/goautoneg v0.0.0-20191010083416-a7dc8b61c822 // indirect
 	github.com/x448/float16 v0.8.4 // indirect
-	gopkg.in/yaml.v2 v2.4.0 // indirect
 	k8s.io/klog/v2 v2.130.1 // indirect
+	sigs.k8s.io/yaml v1.4.0 // indirect
 )
