@@ -7,8 +7,8 @@ toolchain go1.23.4
 require (
 	github.com/hetznercloud/hcloud-go/v2 v2.17.1
 	gopkg.in/yaml.v3 v3.0.1
-	k8s.io/apimachinery v0.32.0
-	k8s.io/client-go v0.32.0
+	k8s.io/apimachinery v0.32.1
+	k8s.io/client-go v0.32.1
 )
 
 require (
