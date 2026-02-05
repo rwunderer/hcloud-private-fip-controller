@@ -23,7 +23,7 @@ RUN CGO_ENABLED=0 GOOS=${TARGETOS} GOARCH=${TARGETARCH} GOARM=${TARGETVARIANT#"v
 #--------
 FROM gcr.io/distroless/static@sha256:972618ca78034aaddc55864342014a96b85108c607372f7cbd0dbd1361f1d841 AS hcloud-private-fip-controller
 
-LABEL version=0.2.71
+LABEL version=0.2.72
 
 WORKDIR /app
 
