@@ -24,7 +24,7 @@ jobs:
       # with sigstore/fulcio when running outside of PRs.
       id-token: write
 
-    uses: rwunderer/renovate/.github/workflows/reusable-docker-publish.yml@8954d96b6abf87389d018e4f629eea22ef58238e # main
+    uses: rwunderer/renovate/.github/workflows/reusable-docker-publish.yml@ac260d33378393f5e078d491f416ef470b0e502a # main
     with:
       target: hcloud-private-fip-controller
       docker-file: ./build/package/Dockerfile
