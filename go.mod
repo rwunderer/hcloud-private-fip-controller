@@ -2,10 +2,10 @@ module github.com/rwunderer/hcloud-private-fip-controller
 
 go 1.26.0
 
-toolchain go1.26.4
+toolchain go1.26.5
 
 require (
-	github.com/hetznercloud/hcloud-go/v2 v2.43.0
+	github.com/hetznercloud/hcloud-go/v2 v2.44.0
 	gopkg.in/yaml.v3 v3.0.1
 	k8s.io/apimachinery v0.36.2
 	k8s.io/client-go v0.36.2
