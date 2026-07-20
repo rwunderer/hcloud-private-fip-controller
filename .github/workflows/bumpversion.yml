@@ -21,11 +21,11 @@ jobs:
 
     steps:
       - name: Checkout repository
-        uses: actions/checkout@de0fac2e4500dabe0009e67214ff5f5447ce83dd # v6.0.2
+        uses: actions/checkout@d23441a48e516b6c34aea4fa41551a30e30af803 # v6.1.0
 
       - name: Bump version
         id: bump
-        uses: callowayproject/bump-my-version@882aec248fd41be6d6c9381e2c48c5d23affba6c # master
+        uses: callowayproject/bump-my-version@1f1e0da9e4647e424cdcb736b3cd4d26a8bb70fb # master
         env:
           BUMPVERSION_TAG: "true"
         with:
