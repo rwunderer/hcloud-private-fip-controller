@@ -5,10 +5,10 @@ go 1.26.0
 toolchain go1.26.5
 
 require (
-	github.com/hetznercloud/hcloud-go/v2 v2.45.0
+	github.com/hetznercloud/hcloud-go/v2 v2.46.0
 	gopkg.in/yaml.v3 v3.0.1
-	k8s.io/apimachinery v0.36.2
-	k8s.io/client-go v0.36.2
+	k8s.io/apimachinery v0.36.3
+	k8s.io/client-go v0.36.3
 )
 
 require (
@@ -39,5 +39,5 @@ require (
 	k8s.io/klog/v2 v2.140.0 // indirect
 	k8s.io/kube-openapi v0.0.0-20260317180543-43fb72c5454a // indirect
 	sigs.k8s.io/randfill v1.0.0 // indirect
-	sigs.k8s.io/structured-merge-diff/v6 v6.3.2 // indirect
+	sigs.k8s.io/structured-merge-diff/v6 v6.3.3 // indirect
 )
