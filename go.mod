@@ -2,7 +2,7 @@ module github.com/rwunderer/hcloud-private-fip-controller
 
 go 1.26.0
 
-toolchain go1.27.0
+toolchain go1.27.1
 
 require (
 	github.com/hetznercloud/hcloud-go/v2 v2.47.0
